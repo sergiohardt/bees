@@ -1,10 +1,10 @@
-package com.demo;
+package br.com.application.cleanarcexample;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class DemoApplicationTests {
+class CleanarcExampleApplicationTests {
 
 	@Test
 	void contextLoads() {
