@@ -1,6 +1,6 @@
-package br.com.application.cleanarcexample.domain.entities.impl;
+package br.com.application.demo.domain.entities.impl;
 
-import br.com.application.cleanarcexample.domain.entities.Person;
+import br.com.application.demo.domain.entities.Person;
 
 public class CommonPerson implements Person {
 

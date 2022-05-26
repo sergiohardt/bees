@@ -1,6 +1,6 @@
-package br.com.application.cleanarcexample.domain.entities;
+package br.com.application.demo.domain.entities;
 
-import br.com.application.cleanarcexample.domain.entities.impl.CommonPerson;
+import br.com.application.demo.domain.entities.impl.CommonPerson;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 

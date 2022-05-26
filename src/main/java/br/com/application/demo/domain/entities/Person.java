@@ -1,4 +1,4 @@
-package br.com.application.cleanarcexample.domain.entities;
+package br.com.application.demo.domain.entities;
 
 //here we define the business rules
 public interface Person {

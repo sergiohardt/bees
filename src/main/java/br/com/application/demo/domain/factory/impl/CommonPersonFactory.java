@@ -1,8 +1,8 @@
-package br.com.application.cleanarcexample.domain.factory.impl;
+package br.com.application.demo.domain.factory.impl;
 
-import br.com.application.cleanarcexample.domain.entities.impl.CommonPerson;
-import br.com.application.cleanarcexample.domain.entities.Person;
-import br.com.application.cleanarcexample.domain.factory.PersonFactory;
+import br.com.application.demo.domain.entities.impl.CommonPerson;
+import br.com.application.demo.domain.entities.Person;
+import br.com.application.demo.domain.factory.PersonFactory;
 
 //this class will be offered by a interface with no implementations (SOLID)
 public class CommonPersonFactory implements PersonFactory {
