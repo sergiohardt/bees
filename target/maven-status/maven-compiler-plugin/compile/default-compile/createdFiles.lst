@@ -1,0 +1,5 @@
+br/com/application/demo/DemoApplication.class
+br/com/application/demo/domain/factory/PersonFactory.class
+br/com/application/demo/domain/entities/Person.class
+br/com/application/demo/domain/entities/impl/CommonPerson.class
+br/com/application/demo/domain/factory/impl/CommonPersonFactory.class

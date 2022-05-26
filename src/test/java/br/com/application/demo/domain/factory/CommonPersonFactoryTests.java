@@ -1,7 +1,7 @@
-package br.com.application.cleanarcexample.domain.factory;
+package br.com.application.demo.domain.factory;
 
-import br.com.application.cleanarcexample.domain.entities.Person;
-import br.com.application.cleanarcexample.domain.factory.impl.CommonPersonFactory;
+import br.com.application.demo.domain.entities.Person;
+import br.com.application.demo.domain.factory.impl.CommonPersonFactory;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertSame;

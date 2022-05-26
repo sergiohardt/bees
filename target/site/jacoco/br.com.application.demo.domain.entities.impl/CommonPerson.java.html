@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="pt"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>CommonPerson.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Demo</a> &gt; <a href="index.source.html" class="el_package">br.com.application.demo.domain.entities.impl</a> &gt; <span class="el_source">CommonPerson.java</span></div><h1>CommonPerson.java</h1><pre class="source lang-java linenums">package br.com.application.demo.domain.entities.impl;
+
+import br.com.application.demo.domain.entities.Person;
+
+public class CommonPerson implements Person {
+
+    private String name;
+    private String cpf;
+    private String rg;
+    private int age;
+
+<span class="fc" id="L12">    public CommonPerson() {</span>
+<span class="fc" id="L13">    }</span>
+
+<span class="fc" id="L15">    public CommonPerson(String name, String cpf, String rg, int age) {</span>
+<span class="fc" id="L16">        this.name = name;</span>
+<span class="fc" id="L17">        this.cpf = cpf;</span>
+<span class="fc" id="L18">        this.rg = rg;</span>
+<span class="fc" id="L19">        this.age = age;</span>
+<span class="fc" id="L20">    }</span>
+
+    public String getName() {
+<span class="fc" id="L23">        return name;</span>
+    }
+
+    public void setName(String name) throws Exception {
+<span class="fc bfc" id="L27" title="All 4 branches covered.">        if (name.isEmpty() || name.isBlank()) {</span>
+<span class="fc" id="L28">            throw new Exception(&quot;The name can not be blank or empty&quot;);</span>
+        } else {
+<span class="fc" id="L30">            this.name = name;</span>
+        }
+<span class="fc" id="L32">    }</span>
+
+    public String getCpf() {
+<span class="fc" id="L35">        return cpf;</span>
+    }
+
+    public void setCpf(String cpf) throws Exception {
+<span class="fc bfc" id="L39" title="All 4 branches covered.">        if (cpf.isEmpty() || cpf.isBlank()) {</span>
+<span class="fc" id="L40">            throw new Exception(&quot;The cpf can not be blank or empty&quot;);</span>
+        } else {
+<span class="fc" id="L42">            isCpfValid(cpf);</span>
+<span class="fc" id="L43">            this.cpf = cpf;</span>
+        }
+<span class="fc" id="L45">    }</span>
+
+    public String getRg() {
+<span class="fc" id="L48">        return rg;</span>
+    }
+
+    public void setRg(String rg) throws Exception {
+<span class="fc bfc" id="L52" title="All 4 branches covered.">        if (rg.isEmpty() || rg.isBlank()) {</span>
+<span class="fc" id="L53">            throw new Exception(&quot;The rg can not be blank or empty&quot;);</span>
+        } else {
+<span class="fc" id="L55">            this.rg = rg;</span>
+        }
+<span class="fc" id="L57">    }</span>
+
+    public int getAge() {
+<span class="fc" id="L60">        return age;</span>
+    }
+
+    public void setAge(int age) throws Exception {
+<span class="fc bfc" id="L64" title="All 2 branches covered.">        if (age == 0) {</span>
+<span class="fc" id="L65">            throw new Exception(&quot;The age must be informed&quot;);</span>
+        } else {
+<span class="fc" id="L67">            this.age = age;</span>
+        }
+<span class="fc" id="L69">    }</span>
+
+    public void isCpfValid(String cpf) throws Exception {
+
+<span class="fc" id="L73">        int total = 0;</span>
+
+<span class="fc" id="L75">        total += Integer.valueOf(cpf.substring(0, 1)) * 10;</span>
+<span class="fc" id="L76">        total += Integer.valueOf(cpf.substring(1, 2)) * 9;</span>
+<span class="fc" id="L77">        total += Integer.valueOf(cpf.substring(2, 3)) * 8;</span>
+<span class="fc" id="L78">        total += Integer.valueOf(cpf.substring(3, 4)) * 7;</span>
+<span class="fc" id="L79">        total += Integer.valueOf(cpf.substring(4, 5)) * 6;</span>
+<span class="fc" id="L80">        total += Integer.valueOf(cpf.substring(5, 6)) * 5;</span>
+<span class="fc" id="L81">        total += Integer.valueOf(cpf.substring(6, 7)) * 4;</span>
+<span class="fc" id="L82">        total += Integer.valueOf(cpf.substring(7, 8)) * 3;</span>
+<span class="fc" id="L83">        total += Integer.valueOf(cpf.substring(8, 9)) * 2;</span>
+
+        //peguei o primeiro digito
+<span class="fc" id="L86">        int digito1 = total%10;</span>
+
+<span class="fc" id="L88">        total = 0;</span>
+
+<span class="fc" id="L90">        total += Integer.valueOf(cpf.substring(0,1)) * 11;</span>
+<span class="fc" id="L91">        total += Integer.valueOf(cpf.substring(1,2)) * 10;</span>
+<span class="fc" id="L92">        total += Integer.valueOf(cpf.substring(2,3)) * 9;</span>
+<span class="fc" id="L93">        total += Integer.valueOf(cpf.substring(3,4)) * 8;</span>
+<span class="fc" id="L94">        total += Integer.valueOf(cpf.substring(4,5)) * 7;</span>
+<span class="fc" id="L95">        total += Integer.valueOf(cpf.substring(5,6)) * 6;</span>
+<span class="fc" id="L96">        total += Integer.valueOf(cpf.substring(6,7)) * 5;</span>
+<span class="fc" id="L97">        total += Integer.valueOf(cpf.substring(7,8)) * 4;</span>
+<span class="fc" id="L98">        total += Integer.valueOf(cpf.substring(8,9)) * 3;</span>
+<span class="fc" id="L99">        total += Integer.valueOf(cpf.substring(9,10)) * 2;</span>
+
+<span class="fc" id="L101">        int digito2 = total%11;</span>
+
+<span class="pc bpc" id="L103" title="1 of 4 branches missed.">        if(!String.valueOf(digito1).equals(cpf.substring(9)) &amp;&amp; String.valueOf(digito1).equals(cpf.substring(10))){</span>
+<span class="fc" id="L104">            throw new Exception(&quot;Cpf is invalid, please verify this information&quot;);</span>
+        }
+
+<span class="fc" id="L107">    }</span>
+
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.2.201808211720</span></div></body></html>

@@ -5,13 +5,13 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.4.5</version>
+		<version>2.5.3</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>br.com.application</groupId>
-	<artifactId>cleanarc-example</artifactId>
+	<artifactId>Demo</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>cleanarc-example</name>
+	<name>Demo</name>
 	<description>Demo project</description>
 	<properties>
 		<java.version>11</java.version>

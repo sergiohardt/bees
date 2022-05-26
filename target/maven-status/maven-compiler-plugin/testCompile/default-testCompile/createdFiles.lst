@@ -1,0 +1,3 @@
+br/com/application/demo/CleanarcExampleApplicationTests.class
+br/com/application/demo/domain/entities/PersonTests.class
+br/com/application/demo/domain/factory/CommonPersonFactoryTests.class
